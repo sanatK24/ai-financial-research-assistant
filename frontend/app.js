@@ -646,8 +646,9 @@ function App() {
                     ) : (
                         <div className="fade-in space-y-6">
                             {/* Stock Dashboard Tab */}
-                            {activeTab === "dashboard" && companyInfo && (
-                                <div className="space-y-6">
+                            <div style={{ display: activeTab === "dashboard" ? "block" : "none" }}>
+                                {companyInfo && (
+                                    <div className="space-y-6">
                                     {/* Summary Cards */}
                                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                                         <div className="glass-card p-6 rounded-xl space-y-2 glow-indigo">
@@ -741,12 +742,14 @@ function App() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            )}
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Financial Statements Tab */}
-                            {activeTab === "statements" && statements && (
-                                <div className="glass-card p-6 rounded-xl space-y-6">
+                            <div style={{ display: activeTab === "statements" ? "block" : "none" }}>
+                                {statements && (
+                                    <div className="glass-card p-6 rounded-xl space-y-6">
                                     <div className="flex justify-between items-center border-b border-white/5 pb-4">
                                         <h3 className="text-base font-semibold text-white">Financial Statement Viewer</h3>
                                     </div>
@@ -813,12 +816,14 @@ function App() {
                                     ) : (
                                         <p className="text-gray-400 text-sm">No historical financial statement data available.</p>
                                     )}
-                                </div>
-                            )}
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Ratios Tab */}
-                            {activeTab === "ratios" && ratios.length > 0 && (
-                                <div className="space-y-6">
+                            <div style={{ display: activeTab === "ratios" ? "block" : "none" }}>
+                                {ratios.length > 0 && (
+                                    <div className="space-y-6">
                                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                         {/* Chart Trend */}
                                         <div className="lg:col-span-2 glass-card p-6 rounded-xl space-y-4">
@@ -889,11 +894,12 @@ function App() {
                                             </table>
                                         </div>
                                     </div>
-                                </div>
-                            )}
+                                    </div>
+                                )}
+                            </div>
 
                             {/* RAG Engine Q&A Tab */}
-                            {activeTab === "rag" && (
+                            <div style={{ display: activeTab === "rag" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <div className="glass-card p-6 rounded-xl space-y-4">
                                         <div className="flex items-center space-x-3 text-indigo-400">
@@ -949,10 +955,10 @@ function App() {
                                         </div>
                                     )}
                                 </div>
-                            )}
+                            </div>
 
                             {/* Research Summaries Tab */}
-                            {activeTab === "reports" && (
+                            <div style={{ display: activeTab === "reports" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <div className="glass-card p-6 rounded-xl flex items-center justify-between">
                                         <div>
@@ -1019,10 +1025,10 @@ function App() {
                                         </div>
                                     )}
                                 </div>
-                            )}
+                            </div>
 
                             {/* Risk Analyzer Tab */}
-                            {activeTab === "risks" && (
+                            <div style={{ display: activeTab === "risks" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <div className="glass-card p-6 rounded-xl flex items-center justify-between">
                                         <div>
@@ -1061,10 +1067,10 @@ function App() {
                                         </div>
                                     )}
                                 </div>
-                            )}
+                            </div>
 
                             {/* Investment Recommendation Tab */}
-                            {activeTab === "recommendation" && (
+                            <div style={{ display: activeTab === "recommendation" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <div className="glass-card p-6 rounded-xl flex items-center justify-between">
                                         <div>
@@ -1125,10 +1131,10 @@ function App() {
                                         </div>
                                     )}
                                 </div>
-                            )}
+                            </div>
 
                             {/* News and Sentiment Tab */}
-                            {activeTab === "news" && (
+                            <div style={{ display: activeTab === "news" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <h3 className="text-base font-bold text-white">Aggregated Real-time News Feed & Sentiment</h3>
                                     <div className="grid grid-cols-1 gap-6">
@@ -1157,10 +1163,10 @@ function App() {
                                         })}
                                     </div>
                                 </div>
-                            )}
+                            </div>
 
                             {/* Earnings Call Transcript Analyzer */}
-                            {activeTab === "earnings" && (
+                            <div style={{ display: activeTab === "earnings" ? "block" : "none" }}>
                                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                     {/* Upload and list */}
                                     <div className="glass-card p-6 rounded-xl space-y-6 self-start">
@@ -1292,10 +1298,10 @@ function App() {
                                         )}
                                     </div>
                                 </div>
-                            )}
+                            </div>
 
                             {/* Ticker Comparison */}
-                            {activeTab === "comparison" && (
+                            <div style={{ display: activeTab === "comparison" ? "block" : "none" }}>
                                 <div className="space-y-6">
                                     <div className="glass-card p-6 rounded-xl">
                                         <h3 className="text-base font-bold text-white mb-4">Compare Two Stocks Side-by-side</h3>
@@ -1395,10 +1401,10 @@ function App() {
                                         </div>
                                     ) : null}
                                 </div>
-                            )}
+                            </div>
 
                             {/* Settings / API keys */}
-                            {activeTab === "settings" && (
+                            <div style={{ display: activeTab === "settings" ? "block" : "none" }}>
                                 <div className="max-w-2xl glass-card p-6 rounded-xl space-y-6">
                                     <div className="border-b border-white/5 pb-3">
                                         <h3 className="text-base font-bold text-white">API Configurations & Keys</h3>
@@ -1448,7 +1454,7 @@ function App() {
                                         </div>
                                     </form>
                                 </div>
-                            )}
+                            </div>
                         </div>
                     )}
                 </div>

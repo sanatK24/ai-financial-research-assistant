@@ -1,7 +1,11 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
+# Load .env configuration
+load_dotenv()
 
 # Default to SQLite inside the backend folder
 DB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "financial_assistant.db"))

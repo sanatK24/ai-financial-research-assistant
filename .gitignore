@@ -1,0 +1,12 @@
+# Python virtual environment
+venv/
+.venv/
+**/__pycache__/
+*.pyc
+
+# Databases & local files
+*.db
+backend/financial_assistant.db
+backend/settings.json
+.env
+.DS_Store

@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+yfinance
+sec-edgar-downloader
+beautifulsoup4
+pandas
+numpy
+scikit-learn
+requests
+pydantic
+python-multipart
+sqlalchemy
